@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .box {
+            width: 40vw;
+            /* v viewport w width 指的是视口的宽度 把视口分成100份，给多事少vw 就是站100份里面的多杀份 */
+            height: 20vh;
+            /* 新单位，也是把视口高度分成100份，给多少分，就是多高 */
+            background-color: red;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="box"></div>
 </body>
 <script src="./kits.js"></script>
 <script>
-    
+
     // 获取16进制随机颜色 格式：#8014e6
-   /*  var color = kits.randomColor();
-    console.log(color); */
+    /*  var color = kits.randomColor();
+     console.log(color); */
 
     // 获取随机整数kits.randomInt(最小值,最大值)
     /* var r = kits.randomInt(22,55);
@@ -27,8 +38,13 @@
     // 获取当前时间 格式：2019-11-15 17:06:44
     /* let date = kits.formatDate();
     console.log(date); */
-    
-    
+
+    // 轻触 tap 事件函数的调用
+    let box = document.querySelector('.box');
+    kits.tap(box,function(){
+        alert('可执行以下代码');
+    });
 
 </script>
+
 </html>
